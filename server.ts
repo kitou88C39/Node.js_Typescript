@@ -7,6 +7,11 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
+//ルーティングを作成する
+app.get('/test', (req, res) => {
+  res.send('Hello World');
+});
+
 app.listen(PORT, () => {
-  console.log(`サーバーが起動しました。http://localhost:${PORT}`);
+  console.log('サーバーが起動しました');
 });
