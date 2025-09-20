@@ -2,6 +2,8 @@ import express from 'express';
 
 const app = express();
 const PORT = 8888;
+//リクエストからjson Dataを受け取る
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello World');
@@ -19,8 +21,10 @@ app.get('/users/:id', (req, res) => {
 
 //Postメソッドの処理の書き方
 app.post('/', (req, res) => {
-  res.send('This is a POST request');
+  res.send(req.body);
 });
+
+//Put/Deleteメソッドの処理の書き方
 
 app.listen(PORT, () => {
   console.log('サーバーが起動しました');
