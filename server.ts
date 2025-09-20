@@ -24,7 +24,12 @@ app.post('/', (req, res) => {
   res.send(req.body);
 });
 
-//Put/Deleteメソッドの処理の書き方
+//Putメソッドの処理の書き方
+app.post('/users/:id', (req, res) => {
+  res.send(req.body);
+});
+
+// Deleteメソッドの処理の書き方
 
 app.listen(PORT, () => {
   console.log('サーバーが起動しました');
