@@ -30,6 +30,9 @@ app.post('/users/:id', (req, res) => {
 });
 
 // Deleteメソッドの処理の書き方
+app.post('/users/:id', (req, res) => {
+  res.send(req.params.id);
+});
 
 app.listen(PORT, () => {
   console.log('サーバーが起動しました');
