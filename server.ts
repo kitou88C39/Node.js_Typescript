@@ -4,9 +4,10 @@ const app = express();
 const PORT = 8888;
 //リクエストからjson Dataを受け取る
 app.use(express.json());
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 //ルーティングを作成する
